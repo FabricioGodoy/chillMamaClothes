@@ -1,14 +1,20 @@
-import { useState } from 'react'
+import {BrowserRouter as Router,Routes,Route,  Navigate } from "react-router-dom";
+import {Home} from "./components/home/home.jsx";
+import {Navbar} from './components/navBar/navbar';
+import {Footer} from "./components/footer/footer";
 
 function App() {
-
   return (
-    <>
-      <h1> chill mama</h1>
-      <h3>gordo chupa nepe </h3>
-
-    </>
-  )
+    <Router>
+      
+        <Navbar/>
+          <Routes>
+            <Route path="/" exact={true} element={<Home />} />
+            <Route path="*" element={<Navigate to="/notFound" />} />
+            
+          </Routes>
+        <Footer />  
+    </Router>
+  );
 }
-
-export default App
+export default App;

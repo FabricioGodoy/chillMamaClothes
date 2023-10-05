@@ -1,0 +1,15 @@
+.navBar{
+    display: flex;
+    flex-wrap:wrap;
+    background-color: #97979732;
+    height: auto;
+    width: 100vw;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.navBar h4{
+    width: 35vw;
+    display: grid;
+    place-items: center;
+}
