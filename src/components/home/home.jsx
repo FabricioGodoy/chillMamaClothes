@@ -3,6 +3,15 @@ import './home.css'
 
 export const Home = () => {
   return (
-    <h1 className='h1Home'>CHILLMAMA</h1>
+    <div>
+      <h1 className='h1Home'>
+        1 CHILLMAMA</h1>
+      <h1 className='h1Home'>CHILLMAMA</h1>
+      <h1 className='h1Home'>CHILLMAMA</h1>
+      <h1 className='h1Home'>CHILLMAMA</h1>
+      <h1 className='h1Home'>CHILLMAMA</h1>
+      <h1 className='h1Home'>CHILLMAMA</h1>
+      <h1 className='h1Home'>CHILLMAMA</h1>
+    </div>
   )
 }

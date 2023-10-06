@@ -1,15 +1,171 @@
-.navBar{
-    display: flex;
-    flex-wrap:wrap;
-    background-color: #97979732;
-    height: auto;
+.header {
+    position: fixed;
     width: 100vw;
-    justify-content:space-around;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-family: Monospace;
+    background-color: #333;
+    padding: 0 25px;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    z-index: 1000;
+    height: auto;
+    transition: all 0.4s ease;
+  }
+  
+  .lineaRoja {
+    display: flex;
+    width: 100%;
+    height: 0.7rem;
+    background-color: #452b1a;
+  }
+  .brand-tittle {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+  }
+  .navigation{
+    margin: auto;
+  }
+  .navigation ul {
+    list-style: none;
+  }
+  .header .navigation ul li {
+    float: left;
+    position: relative;
+  }
+  .sticky {
+    /*   background-color: rgb(41, 19, 19); */
+    opacity: 1; /* opacity: 0; !!!!! */
+    background-color: #333;
+  }
+  .sticky:hover {
+    /*   background-color: rgb(41, 19, 19); */
+    opacity: 1;
+  }
+  .header .navigation ul li a,
+  .header .sticky .navigation ul li a {
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    /*  transition: all .5s ease; */
+    border-radius: 5px;
+  }
+  .header .sticky .navigation ul li a {
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+    
+  }
+  .header .navigation ul li a:hover {
+    background-color: #452b1a;;
+  }
+  .header .navigation ul li ul {
+    position: absolute;
+    right: 0;
+    width: 300px;
+    background-color: #555;
+    padding: 0;
+    text-align: center;
+    display: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 50px black;
+  }
+  
+  .header .navigation ul li ul li a {
+    font-size: 15px;
+    text-transform: capitalize;
+  }
+  .header .navigation ul li ul li ul {
+    position: absolute;
+    top: 0;
+    right: 300px;
+  }
+  .header .navigation ul li ul li {
+    width: 100%;
+  }
+  .header .navigation ul li:hover > ul {
+    display: initial;
+  }
+  .header .sticky .navigation ul li:hover > ul {
+    display: initial;
+  }
+  #toggle,
+  .header label {
+    display: none;
+    cursor: pointer;
+    background-color: #333
+  }
+  .menu {
+    width: 45px;
+    height: 35px;
+    margin: 5px;  background-color: #333;
+  }
+  .listMarcas {
+    height: 30px;
+    font-weight: 500;
+  }
+  .listadoScroll {
+    overflow-y: scroll;
+    max-height: 90vh;
+  }
+  .iconContact{
+    height: 2.5rem;
+    width: 2.5rem;
 }
+  @media (max-width: 950px) {
+    .sticky {
+      opacity: 1;
+    }
+    .header .navigation ul li a br{
+      display: none;
+    }
+    .listadoScrollMoblie {
+      overflow-y: hidden;
+    }
+    .header .navigation ul li:active {
+      display: initial;
+    }
+    .header label {
+      display: initial;
+    }
+    .header .navigation {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #555;
+      display: none;
+    }
+    .header .navigation ul li {
+      width: 100%;
+    }
+    .header .navigation ul li a {
+      padding: 8px 30px 8px 10%;
+    }
+    .header .navigation ul li ul {
+      position: relative;
+      width: 100%;
+      left: 0;
+    }
+    .header .navigation ul li ul li {
+      background-color: #555;
+    }
+    .header .navigation ul li ul li ul {
+      position: relative;
+      width: 100%;
+      left: 0;
+    }
+    #toggle:checked ~ .navigation {
+      display: block;
+    }
+  }
+  
 
-.navBar h4{
-    width: 35vw;
-    display: grid;
-    place-items: center;
-}
+  
