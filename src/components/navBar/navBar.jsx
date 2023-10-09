@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import "./navBar.css";
 
 export const NavBar = () => {
@@ -6,17 +7,18 @@ export const NavBar = () => {
     var header = document.querySelector("header");
     header.classList.toggle("sticky", window.scrollY > 0);
   });
-
+  const [isNavigationVisible, setNavigationVisible] = useState(false);
+  const [isNavigation2Visible, setNavigation2Visible] = useState(false);
   
   return (
     <header className="header">
       <span className="lineaRoja" />
 
       <input type="checkbox" id="toggle" />
-      <label htmlFor="toggle">
+      <label htmlFor="toggle" onClick={() => {setNavigationVisible(!isNavigationVisible); setNavigation2Visible(false);}}>
         <img
           className="menu"
-          src="https://img.icons8.com/ios-filled/50/null/menu-rounded.png"
+          src="../../../public/bars-solid.svg"
           alt="menu"
         />{" "}
       </label>

@@ -128,7 +128,9 @@
   .menu {
     width: 45px;
     height: 35px;
-    margin: 5px;  background-color: #333;
+    margin: 5px; 
+     background-color: #68676753;
+     border-radius: 10px;
   }
   .listMarcas {
     height: 30px;
