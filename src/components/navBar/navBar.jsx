@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import burgerMenu from "../../../public/bars-solid.svg";
 import "./navBar.css";
 
 export const NavBar = () => {
@@ -15,7 +16,7 @@ export const NavBar = () => {
       <label htmlFor="toggle">
         <img
           className="menu"
-          src="../../../public/bars-solid.svg"
+          src= {burgerMenu}
           alt="menu"
         />{" "}
       </label>
