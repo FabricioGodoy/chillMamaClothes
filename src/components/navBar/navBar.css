@@ -25,13 +25,15 @@
     font-size: 1.5rem;
     margin: 0.5rem;
   }
-  .navigation{
+  .navigation ,.navigation2{
     margin: auto;
+    width: auto;
   }
-  .navigation ul {
+  .navigation ul , .navigation2 ul {
     list-style: none;
   }
-  .header .navigation ul li {
+  .header .navigation ul li,
+  .navigation2 ul li {
     float: left;
     position: relative;
   }
@@ -54,7 +56,19 @@
     /*  transition: all .5s ease; */
     border-radius: 5px;
   }
-  .header .sticky .navigation ul li a {
+  .header .navigation2 ul li a,
+  .header .sticky .navigation2 ul li a{
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    /*  transition: all .5s ease; */
+    border-radius: 5px;
+    margin:0 0.2em;
+  }
+  .header .sticky .navigation ul li a,
+  .header .sticky .navigation2 ul li a {
     font-size: 18px;
     color: #ffffff;
     text-decoration: none;
@@ -63,13 +77,15 @@
     border-radius: 5px;
     
   }
-  .header .navigation ul li a:hover {
+  .header .navigation ul li a:hover ,
+  .header .navigation2 ul li a:hover {
     background-color: #452b1a;;
   }
-  .header .navigation ul li ul {
+  .header .navigation ul li ul,
+  .header .navigation2 ul li ul {
     position: absolute;
     right: 0;
-    width: 300px;
+    width: 15vw;
     background-color: #555;
     padding: 0;
     text-align: center;
@@ -78,23 +94,30 @@
     box-shadow: 5px 5px 50px black;
   }
   
-  .header .navigation ul li ul li a {
+  .header .navigation ul li ul li a,
+  .header .navigation2 ul li ul li a {
     font-size: 15px;
     text-transform: capitalize;
   }
-  .header .navigation ul li ul li ul {
+  .header .navigation ul li ul li ul,
+  .header .navigation2 ul li ul li ul {  
     position: absolute;
     top: 0;
     right: 300px;
   }
-  .header .navigation ul li ul li {
+  .header .navigation ul li ul li,
+  .header .navigation2 ul li ul li {
     width: 100%;
   }
-  .header .navigation ul li:hover > ul {
+  .header .navigation ul li:hover > ul,
+  .header .navigation2 ul li:hover > ul {
     display: initial;
   }
   .header .sticky .navigation ul li:hover > ul {
     display: initial;
+  }
+  .header .sticky .navigation2 ul li:hover > ul {
+    display:inherit;
   }
   #toggle,
   .header label {
@@ -165,6 +188,10 @@
     #toggle:checked ~ .navigation {
       display: block;
     }
+    .header .navigation ul li ul,
+  .header .navigation2 ul li ul{
+    width: 40vw;
+  }
   }
   
 

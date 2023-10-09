@@ -21,7 +21,7 @@ export const NavBar = () => {
         />{" "}
       </label>
 
-      <nav className="navigation">
+      <div className="navigation">
         <ul>
        {/*    <li>
             <Link to="collection">Collection</Link>
@@ -85,7 +85,7 @@ export const NavBar = () => {
             </ul>
           </li>
           <li>
-            <Link to="/#">Kinds</Link>
+            <Link to="/#">Kids</Link>
             <ul>
               <li>
                 <Link to="/#">Buzos</Link>
@@ -125,7 +125,42 @@ export const NavBar = () => {
             </ul>
           </li>
         </ul>
-      </nav>
+      </div>
+
+
+      <div className="navigation2">      
+        <ul> 
+          <li>
+            <Link to="#">Favs</Link>
+            <ul>
+              <li>
+                <Link to="/#">prod favs</Link>
+              </li>
+            </ul> 
+          </li>
+       
+          <li>
+            <Link to="#">Compras</Link>
+            <ul>
+              <li>
+                <Link to="/#">Mis compras</Link>
+              </li>
+            </ul> 
+          </li>
+
+          <li>
+            <Link to="#">Perfil</Link>
+            <ul>
+              <li>
+                <Link to="/#">Mi perfil</Link>
+              </li>
+              <li>
+                <Link to="/#">Cerrar sesion</Link>
+              </li>
+            </ul> 
+          </li>
+        </ul>
+      </div>
     </header>
   );
 };
